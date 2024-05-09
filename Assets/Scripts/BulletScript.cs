@@ -19,7 +19,12 @@ public class BulletScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("destroy"))
         {
-            Destroy(other.gameObject);
+            switch (gameObject.tag)
+            {
+                case "Bullet": Destroy(other.gameObject); PointManager.points += 10; break;
+                    default: Destroy(other.gameObject);  break;
+            }
+            
             // Debug.Log("Detroyed");
         }
     }

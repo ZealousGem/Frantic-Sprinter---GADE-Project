@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class TimeCounter : MonoBehaviour
 {
     // Start is called before the first frame update
-    private float timmy = 0.0f;
+    private float timmy;
     public int timer;
     public static int bridge;
     public Text no;
@@ -15,7 +15,11 @@ public class TimeCounter : MonoBehaviour
     [SerializeField] private GameOverMenu gameOverMenu;
 
     // Update is called once per frame
-     void Update()
+    private void Start()
+    {
+        timmy = 0.0f;
+    }
+    void Update()
     {
         if (gameOverMenu.isActive is false)
         {
@@ -23,6 +27,7 @@ public class TimeCounter : MonoBehaviour
             timmy +=  Time.deltaTime;
             timer = (int)(timmy);
             bridge = timer;
+          //  Debug.Log(bridge);
             no.text = timer.ToString();
            // Debug.Log(timer.ToString());
 

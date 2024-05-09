@@ -10,11 +10,13 @@ public class MenuScreen : MonoBehaviour
 {
     public GameObject startPanel;
     public GameObject levelSelectPanel;
+   // public static bool run;
     //public GameObject howToPlayPanel;
 
     // Start is called before the first frame update
     void Start()
     {
+        //run = true;
         levelSelectPanel.SetActive(false);
         startPanel.SetActive(true);
         //howToPlayPanel.SetActive(false);

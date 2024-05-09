@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class EnemyMovement : MonoBehaviour
     // Vector3 movement;
    // public GameObject boss;
     public GameObject gun;
+    
     public Vector3 startpos = new Vector3(0f, 0f, 0f);
     public Vector3 endpos1 = new Vector3(0f, 0f, 0f);
     public Vector3 endpos2 = new Vector3(0f, 0f, 0f);
@@ -29,6 +31,7 @@ public class EnemyMovement : MonoBehaviour
             right = false;
            DeathTime = false;
            gun.SetActive(false);
+         
           
     }
 
@@ -42,6 +45,7 @@ public class EnemyMovement : MonoBehaviour
             {
             if (DeathTime != true)
             {
+               
                 gun.SetActive(true);
                 if (right is true)
                 {
@@ -107,14 +111,18 @@ public class EnemyMovement : MonoBehaviour
 
     public void introMovement()
     {
+       
         if (transform.position != startpos)
         {
+           
             transform.position = Vector3.MoveTowards(transform.position, startpos, mveSpeed * Time.deltaTime);
         }
 
         else
         {
             begin = true;
+            GameManager.goAway = true;
+            
         }
     }
 

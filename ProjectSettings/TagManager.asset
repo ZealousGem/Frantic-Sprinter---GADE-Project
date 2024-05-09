@@ -8,6 +8,8 @@ TagManager:
   - destroy
   - PickUp
   - Destroyer
+  - inc
+  - Bullet
   layers:
   - Default
   - TransparentFX

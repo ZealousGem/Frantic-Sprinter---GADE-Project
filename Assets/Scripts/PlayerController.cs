@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
             switch (gameObject.tag)
             {
                 case "Player": Damage(damage); break;
-                case "Destroyer": Destroy(other.gameObject); break;
+                case "Destroyer": Destroy(other.gameObject); PointManager.points += 10; break;
             }
              
         }
