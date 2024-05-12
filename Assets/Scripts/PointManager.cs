@@ -8,6 +8,8 @@ public class PointManager : MonoBehaviour
     // Start is called before the first frame update
     public static int points { get; set; }
     public Text Points;
+    public Text Display;
+
     //int finalPoints = 0;
     void Start()
     {
@@ -20,6 +22,7 @@ public class PointManager : MonoBehaviour
     {
 
         Points.text = points.ToString();
-        Debug.Log(points);
+        Display.text = Points.text;
+       // Debug.Log(points);
     }
 }

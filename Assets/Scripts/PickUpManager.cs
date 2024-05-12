@@ -31,7 +31,7 @@ public class PickUpManager : MonoBehaviour
 
             
            StartCoroutine(Pickup());
-            Debug.Log("couritine");
+          //  Debug.Log("couritine");
 
         }
 
@@ -59,7 +59,7 @@ public class PickUpManager : MonoBehaviour
        
         GameObject player = playerObject;
         // Debug.Log("work");
-        float time = 0f;
+      //  float time = 0f;
 
         // time += Time.deltaTime;
         
