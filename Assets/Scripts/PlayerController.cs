@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     public int score = 100;
     public score health;
     public GameOverMenu gameOverMenu;
+    public Animator Ani;
     private int newScore = 0;
     private int damage = 50;
     private int heal = 25;
@@ -102,6 +103,7 @@ public class PlayerController : MonoBehaviour
         {
             //rb.AddForce(JumpInput * jump, ForceMode.Impulse);
             rb.AddForce(new Vector3(rb.velocity.x, jump, 0f), ForceMode.Impulse);
+            Ani.SetTrigger("Jump");
             isGrounded = false;
 
         }
