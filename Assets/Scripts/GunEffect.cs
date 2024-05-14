@@ -10,8 +10,8 @@ public class GunEffect : PickUpPower
     public override void ActivateEffect(GameObject player, GameObject cap)
     {
         string tag = "Destroyer";
-        cap.GetComponent<MeshRenderer>().material.color = Color.red;
-
+       // cap.GetComponent<MeshRenderer>().material.color = Color.red;
+        cap.SetActive(true);
         player.tag = tag;
 
     
@@ -21,7 +21,8 @@ public class GunEffect : PickUpPower
     public override void RemoveEffect(GameObject player, GameObject cap)
     {
         string tag = "Player";
-        cap.GetComponent<MeshRenderer>().material.color = Color.gray;
+        //cap.GetComponent<MeshRenderer>().material.color = Color.gray;
+        cap.SetActive(false);
         player.tag = tag;
      
     }

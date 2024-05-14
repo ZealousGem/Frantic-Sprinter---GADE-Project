@@ -12,10 +12,14 @@ public class WeaponEffect : PickUpPower
     {
         
         activateGun = true;
+        cap.SetActive(true);
+        
     }
 
     public override void RemoveEffect(GameObject player, GameObject cap)
     {
         activateGun = false;
+        cap.SetActive(false);
+       
     }
 }

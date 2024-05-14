@@ -18,10 +18,15 @@ public class PickUpManager : MonoBehaviour
     //public static ;
      public GameObject playerObject;
     public GameObject targetObject;
-   /* void Start()
+    public GameObject caps;
+    public GameObject capping;
+    void Start()
     {
+        targetObject = caps;
+        targetObject.SetActive(false);
+        StopAllCoroutines();
         
-    } */
+    } 
 
     // Update is called once per frame
     void Update()
@@ -29,10 +34,22 @@ public class PickUpManager : MonoBehaviour
         if (confirm) 
         {
 
+            if (gunAct is true)
+            {
+                power = invicble;
+                targetObject = caps;
+                StartCoroutine(Pickup());
+               // StopCoroutine(Pickup2());
+            }
             
-           StartCoroutine(Pickup());
-          //  Debug.Log("couritine");
-
+            //  Debug.Log("couritine");
+            if (bunAct is true)
+            {
+                power = weapon;
+                targetObject = capping;
+                StartCoroutine(Pickup2());
+               // StopCoroutine(Pickup());
+            }
         }
 
         
@@ -47,15 +64,7 @@ public class PickUpManager : MonoBehaviour
     {
         // power = invicble;
         // GameObject player = GameObject.FindGameObjectWithTag("Player").gameObject;
-        if (gunAct is true)
-        {
-            power = invicble;
-        }
-
-        if (bunAct is true)
-        {
-            power = weapon;
-        }
+      
        
         GameObject player = playerObject;
         // Debug.Log("work");
@@ -70,6 +79,31 @@ public class PickUpManager : MonoBehaviour
             confirm = false;
             gunAct = false;
             bunAct = false;
+
+
+
+
+
+    }
+
+    public IEnumerator Pickup2()
+    {
+        // power = invicble;
+        // GameObject player = GameObject.FindGameObjectWithTag("Player").gameObject;
+
+        GameObject player = playerObject;
+        // Debug.Log("work");
+        //  float time = 0f;
+
+        // time += Time.deltaTime;
+
+        ActivatePickUp(player);
+        // Debug.Log("working");
+        yield return new WaitForSeconds(end);
+        DeactivatePickUp(player);
+        confirm = false;
+        gunAct = false;
+        bunAct = false;
 
 
 
