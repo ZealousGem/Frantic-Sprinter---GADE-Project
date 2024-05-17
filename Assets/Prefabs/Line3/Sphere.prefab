@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da16297106dd65d4797db83698d149c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPos: {x: 0.14, y: 3.07, z: -8.64}
+  endPos: {x: 0.14, y: 1, z: -8.64}
 --- !u!54 &1288363392281942973
 Rigidbody:
   m_ObjectHideFlags: 0

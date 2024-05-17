@@ -18,6 +18,8 @@ public class EnemyMovement : MonoBehaviour
     public Vector3 startpos = new Vector3(0f, 0f, 0f);
     public Vector3 endpos1 = new Vector3(0f, 0f, 0f);
     public Vector3 endpos2 = new Vector3(0f, 0f, 0f);
+    public Animator mve;
+    string boss = "Boss";
     int bossHealth = 200;
   [NonSerialized]  public static bool DeathTime;
     bool begin = false;
@@ -29,8 +31,10 @@ public class EnemyMovement : MonoBehaviour
        
             left = true;
             right = false;
-           DeathTime = false;
-           gun.SetActive(false);
+            DeathTime = false;
+            gun.SetActive(false);
+        mve.SetBool(boss, true);
+           
          
           
     }
@@ -122,6 +126,8 @@ public class EnemyMovement : MonoBehaviour
         {
             begin = true;
             GameManager.goAway = true;
+            mve.SetBool(boss, false);
+       
             
         }
     }

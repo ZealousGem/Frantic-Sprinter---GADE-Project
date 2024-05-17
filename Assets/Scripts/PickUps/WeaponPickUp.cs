@@ -10,8 +10,12 @@ public class WeaponPickUp : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             //  PickUpManager.power = gun;
-            PickUpManager.confirm = true;
-            PickUpManager.bunAct = true;
+          
+            if (PickUpManager.gunAct != true)
+            {
+                PickUpManager.confirm = true;
+                PickUpManager.bunAct = true;
+            }
 
 
             Destroy(this.gameObject);

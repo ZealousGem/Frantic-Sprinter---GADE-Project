@@ -12,6 +12,10 @@ public class TextGraphics : MonoBehaviour
     bool change = false;
 
     // Update is called once per frame
+    private void Start()
+    {
+        boss.text = "BOSS INCOMING!!!";
+    }
     void Update()
     {
         if (GameOverMenu.bossy == true || PauseMenu.isPaused == true)

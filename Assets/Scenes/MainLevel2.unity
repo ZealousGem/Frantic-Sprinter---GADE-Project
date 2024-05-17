@@ -252,14 +252,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35473739}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ab77308f11a16548a2a9bc1af3292ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 5349916221934948252, guid: e686d01d0448e4346b1599e01b297f0d, type: 3}
-  frequency: 5
-  intSpeed: 3
+  frequency: 3
+  intSpeed: 5
 --- !u!4 &35473741
 Transform:
   m_ObjectHideFlags: 0
@@ -1300,8 +1300,8 @@ MonoBehaviour:
   spawner3: {fileID: 3130421120103443918, guid: de45cea5473754c42ba6bb46c5b030ae,
     type: 3}
   ActualSpawn: {fileID: 0}
-  frequency: 3
-  intSpeed: 2
+  frequency: 2
+  intSpeed: 7
   SpawenrRand: []
 --- !u!1 &397084514
 GameObject:
@@ -2401,6 +2401,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557126282}
   m_CullTransparentMesh: 1
+--- !u!1 &560720129 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d8fdeeb5792e6194ea4b5848663729aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 885461933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &561938378
 GameObject:
   m_ObjectHideFlags: 0
@@ -2536,7 +2542,7 @@ MonoBehaviour:
   spawner3: {fileID: 5349916221934948252, guid: c7104246f39e07c499db952e1280bc3f,
     type: 3}
   ActualSpawn: {fileID: 0}
-  frequency: 3
+  frequency: 2
   intSpeed: 50
   SpawenrRand: []
 --- !u!1 &635794212
@@ -3144,7 +3150,7 @@ MonoBehaviour:
     type: 3}
   spawner3: {fileID: 808762317834127728, guid: fcbccc6bc8c60eb4f844cc55d368538f, type: 3}
   ActualSpawn: {fileID: 0}
-  frequency: 2
+  frequency: 1.5
   intSpeed: 20
   SpawenrRand: []
 --- !u!1 &737338947
@@ -4223,8 +4229,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 8183390860712030703, guid: de13a7420582ded45a8d7d3f96889aca,
-        type: 3}
+      objectReference: {fileID: 2100000, guid: 0ec77e506658168428e174ef6ddb4abe, type: 2}
     - target: {fileID: 919132149155446097, guid: d8fdeeb5792e6194ea4b5848663729aa,
         type: 3}
       propertyPath: m_Name
@@ -4233,7 +4238,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d8fdeeb5792e6194ea4b5848663729aa,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1189893102}
   m_SourcePrefab: {fileID: 100100000, guid: d8fdeeb5792e6194ea4b5848663729aa, type: 3}
 --- !u!1 &897311090
 GameObject:
@@ -5106,10 +5115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -5549,6 +5558,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 885461933}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1189893102
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560720129}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b93c3de423b60fb44bcfd5ad8f66e5a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1219901135 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1782702501690864755, guid: 60770bdb4dc667c45bea53db0339dc05,
@@ -5766,6 +5796,7 @@ MonoBehaviour:
   startpos: {x: 0.21, y: 4.01, z: 51.64}
   endpos1: {x: -4.74, y: 4.01, z: 51.64}
   endpos2: {x: 6.18, y: 4.01, z: 51.64}
+  mve: {fileID: 1189893102}
 --- !u!4 &1280371439 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3126830344225031681, guid: 5c41a627b039c0f4d81be4d6b380ff2d,
@@ -6534,7 +6565,7 @@ MonoBehaviour:
   spawner3: {fileID: 3130421120103443918, guid: 7fdef58abf34c7044b1112982e3bc67f,
     type: 3}
   ActualSpawn: {fileID: 0}
-  frequency: 2
+  frequency: 4
   intSpeed: 20
   SpawenrRand: []
 --- !u!1 &1537264537
