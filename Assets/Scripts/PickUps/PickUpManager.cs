@@ -9,6 +9,7 @@ public class PickUpManager : MonoBehaviour
 
     
     public PickUpPower power;
+
     public GunEffect invicble;
     public WeaponEffect weapon;
     public float end = 10f;
@@ -17,6 +18,7 @@ public class PickUpManager : MonoBehaviour
     public static bool bunAct = false;
     //public static ;
      public GameObject playerObject;
+    public GameObject ObjectPlayer;
     public GameObject targetObject;
     public GameObject caps;
     public GameObject capping;
@@ -39,6 +41,7 @@ public class PickUpManager : MonoBehaviour
                 power = invicble;
                 targetObject = caps;
                 StartCoroutine(Pickup());
+                
                // StopCoroutine(Pickup2());
             }
             
@@ -48,9 +51,16 @@ public class PickUpManager : MonoBehaviour
                 power = weapon;
                 targetObject = capping;
                 StartCoroutine(Pickup2());
+                
                // StopCoroutine(Pickup());
             }
         }
+
+        else
+        {
+            StopAllCoroutines();
+        }
+
 
         
 
@@ -68,11 +78,11 @@ public class PickUpManager : MonoBehaviour
        
         GameObject player = playerObject;
         // Debug.Log("work");
-      //  float time = 0f;
+        //  float time = 0f;
 
         // time += Time.deltaTime;
-        
-            ActivatePickUp(player);
+        Debug.Log("work");
+        ActivatePickUp(player);
        // Debug.Log("working");
             yield return new WaitForSeconds(end);
             DeactivatePickUp(player);
@@ -98,6 +108,7 @@ public class PickUpManager : MonoBehaviour
         // time += Time.deltaTime;
 
         ActivatePickUp(player);
+        Debug.Log("work");
         // Debug.Log("working");
         yield return new WaitForSeconds(end);
         DeactivatePickUp(player);

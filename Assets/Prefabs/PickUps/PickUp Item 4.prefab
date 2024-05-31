@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da16297106dd65d4797db83698d149c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPos: {x: 2, y: 1, z: -8.64}
+  endPos: {x: -0.28, y: 1, z: -8.64}
 --- !u!54 &1877841435177288284
 Rigidbody:
   m_ObjectHideFlags: 0

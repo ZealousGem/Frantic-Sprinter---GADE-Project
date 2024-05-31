@@ -259,7 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner: {fileID: 5349916221934948252, guid: e686d01d0448e4346b1599e01b297f0d, type: 3}
   frequency: 3
-  intSpeed: 5
+  intSpeed: 20
 --- !u!4 &35473741
 Transform:
   m_ObjectHideFlags: 0
@@ -469,6 +469,7 @@ MonoBehaviour:
   weapon: {fileID: 11400000, guid: 6ea41d9f8f5224f45aa27415f07061ce, type: 2}
   end: 5
   playerObject: {fileID: 832575517}
+  ObjectPlayer: {fileID: 0}
   targetObject: {fileID: 0}
   caps: {fileID: 2049630917}
   capping: {fileID: 57817650}
@@ -1295,13 +1296,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner1: {fileID: 5349916221934948252, guid: f4924216ff809f742b5868e7bcdf3af1,
     type: 3}
-  spawner2: {fileID: 2051712753779359591, guid: 4e89a4a055e3b314c9d97143af15bbbe,
+  spawner2: {fileID: 3130421120103443918, guid: 7fdef58abf34c7044b1112982e3bc67f,
     type: 3}
   spawner3: {fileID: 3130421120103443918, guid: de45cea5473754c42ba6bb46c5b030ae,
     type: 3}
   ActualSpawn: {fileID: 0}
   frequency: 2
-  intSpeed: 7
+  intSpeed: 20
   SpawenrRand: []
 --- !u!1 &397084514
 GameObject:
@@ -6560,7 +6561,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawner1: {fileID: 2051712753779359591, guid: 730c6cd17fcd4c14a8beffe4d78bb081,
     type: 3}
-  spawner2: {fileID: 5349916221934948252, guid: bc6928208349a974fb4b01c75cd55355,
+  spawner2: {fileID: 6964919505528648374, guid: 5e8e1374ca6f9834ea70b2ce0aab0976,
     type: 3}
   spawner3: {fileID: 3130421120103443918, guid: 7fdef58abf34c7044b1112982e3bc67f,
     type: 3}
