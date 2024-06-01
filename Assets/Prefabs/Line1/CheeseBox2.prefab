@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da16297106dd65d4797db83698d149c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPos: {x: -3.2, y: 3.07, z: -8.64}
+  endPos: {x: -5, y: 1, z: -8.64}
 --- !u!65 &2500914069517736748
 BoxCollider:
   m_ObjectHideFlags: 0
