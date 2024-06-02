@@ -72,8 +72,11 @@ public class GameOverMenu : MonoBehaviour
         SceneManager.LoadScene("MainLevel2");
         //gameOver.SetActive(false);
         score = 100;
+        GlobalPoints.Instance.Reset();
+        PointManager.points = GlobalPoints.Instance.getPoints();
         isActive = false;
         bossy =false;
+        
     }
 
     public void stopGame()

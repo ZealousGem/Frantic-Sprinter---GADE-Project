@@ -18,6 +18,7 @@ public class TimeCounter : MonoBehaviour
     private void Start()
     {
         timmy = 0.0f;
+        timer = 0;
     }
     void Update()
     {

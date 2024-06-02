@@ -10,6 +10,8 @@ TagManager:
   - Destroyer
   - inc
   - Bullet
+  - Boss
+  - Boss2
   layers:
   - Default
   - TransparentFX

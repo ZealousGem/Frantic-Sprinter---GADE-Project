@@ -71,9 +71,19 @@ public class PlayerController : MonoBehaviour
             }
              
         }
-            
-            
-        
+
+        if (other.gameObject.CompareTag("Boss"))
+        {
+            Damage(damage);
+        }
+
+        if (other.gameObject.CompareTag("Boss2"))
+        {
+            Damage(damage);
+        }
+
+
+
 
         if (other.gameObject.CompareTag("PickUp"))
         {

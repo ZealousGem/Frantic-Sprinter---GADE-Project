@@ -134,7 +134,7 @@ public class EnemyMovement : MonoBehaviour
 
     public void Death()
     {
-        Destroy(this.gameObject);    
+       Destroy(this.gameObject);    
     }
 
     public void LoseHealth()

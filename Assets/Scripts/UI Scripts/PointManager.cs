@@ -13,16 +13,24 @@ public class PointManager : MonoBehaviour
     //int finalPoints = 0;
     void Start()
     {
-      //  finalPoints = 0;
-        points = 0;
+        //  finalPoints = 0;
+
+        
+
+       
+        
+          points = GlobalPoints.Instance.getPoints();
+        
+      
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
         Points.text = points.ToString();
         Display.text = Points.text;
+        GlobalPoints.Instance.setPointsint(points); 
        // Debug.Log(points);
     }
 }
