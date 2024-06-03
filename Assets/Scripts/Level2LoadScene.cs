@@ -19,7 +19,8 @@ public class Level2LoadScene : MonoBehaviour
     public void LoadScene1()
     {
 
-        SceneManager.LoadScene("MainLevel3"); Debug.Log("load"); /*SceneCounter.currentScene = scenes[1]; */
+        SceneManager.LoadScene("MainLevel3"); Debug.Log("load");
+        PointManager.LoopPoints3 += 1;/*SceneCounter.currentScene = scenes[1]; */
         /* SceneCounter.currentScene = scenes[0]; */
 
     }

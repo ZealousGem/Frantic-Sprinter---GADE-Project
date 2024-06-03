@@ -20,6 +20,6 @@ public class Level3LoadScene : MonoBehaviour
 
         /*SceneCounter.currentScene = scenes[1]; */
         SceneManager.LoadScene("MainLevel2"); Debug.Log("load"); /* SceneCounter.currentScene = scenes[0]; */
-
+        PointManager.LoopPoints3 += 1;
     }
 }

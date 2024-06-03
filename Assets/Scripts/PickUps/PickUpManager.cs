@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PickUpManager : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class PickUpManager : MonoBehaviour
     public GameObject targetObject;
     public GameObject caps;
     public GameObject capping;
+
+    public UnityEvent Pickup1;
+    public UnityEvent PlayerPickup2;
+    public UnityEvent StopPickups;
     void Start()
     {
         targetObject = caps;
@@ -38,9 +43,7 @@ public class PickUpManager : MonoBehaviour
 
             if (gunAct is true)
             {
-                power = invicble;
-                targetObject = caps;
-                StartCoroutine(Pickup());
+               Pickup1?.Invoke();
                 
                // StopCoroutine(Pickup2());
             }
@@ -48,9 +51,7 @@ public class PickUpManager : MonoBehaviour
             //  Debug.Log("couritine");
             if (bunAct is true)
             {
-                power = weapon;
-                targetObject = capping;
-                StartCoroutine(Pickup2());
+               PlayerPickup2?.Invoke();   
                 
                // StopCoroutine(Pickup());
             }
@@ -58,7 +59,7 @@ public class PickUpManager : MonoBehaviour
 
         else
         {
-            StopAllCoroutines();
+            StopPickups?.Invoke();
         }
 
 
@@ -81,7 +82,7 @@ public class PickUpManager : MonoBehaviour
         //  float time = 0f;
 
         // time += Time.deltaTime;
-        Debug.Log("work");
+       // Debug.Log("work");
         ActivatePickUp(player);
        // Debug.Log("working");
             yield return new WaitForSeconds(end);
@@ -108,7 +109,7 @@ public class PickUpManager : MonoBehaviour
         // time += Time.deltaTime;
 
         ActivatePickUp(player);
-        Debug.Log("work");
+       // Debug.Log("work");
         // Debug.Log("working");
         yield return new WaitForSeconds(end);
         DeactivatePickUp(player);
@@ -131,5 +132,25 @@ public class PickUpManager : MonoBehaviour
     {
         
         power.RemoveEffect(player, targetObject);
+    }
+
+
+    public void GunPickUp()
+    {
+        power = weapon;
+        targetObject = capping;
+        StartCoroutine(Pickup2());
+    }
+
+    public void InvPickUp()
+    {
+        power = invicble;
+        targetObject = caps;
+        StartCoroutine(Pickup());
+    }
+
+    public void Stop()
+    {
+        StopAllCoroutines();
     }
 }

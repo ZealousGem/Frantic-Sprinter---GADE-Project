@@ -1,8 +1,11 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +17,15 @@ public class GameManager : MonoBehaviour
     public static bool goAway;
     public static bool enter;
     public static bool texting;
-   
+
+    public PickUpManager PickUpManager;
+    public PointManager pointManager;
+
+
+    public UnityEvent BossSpawn;
+    public UnityEvent LooperSpawn;
+    public UnityEvent BossDeath;
+  
     void Start()
     {
         goAway = false;
@@ -25,6 +36,15 @@ public class GameManager : MonoBehaviour
         bossText.SetActive(false);
         looper.SetActive(false);
 
+
+        PickUpManager.Pickup1.AddListener(PickUpManager.InvPickUp);
+        PickUpManager.PlayerPickup2.AddListener(PickUpManager.GunPickUp);
+        PickUpManager.StopPickups.AddListener(PickUpManager.Stop);
+
+        pointManager.PointEvent.AddListener(pointManager.PointDisplay);
+
+      
+
         //  Debug.Log(currentScene);
 
     }
@@ -34,9 +54,8 @@ public class GameManager : MonoBehaviour
     {
         if (TimeCounter.bridge == 70)
         {
-            boss.SetActive(true);
-            bossText.SetActive(true);
-            texting = true;
+          
+           BossSpawn?.Invoke();
             
         }
 
@@ -52,21 +71,39 @@ public class GameManager : MonoBehaviour
 
         if (TimeCounter.bridge == 150)
         {
-            Destroy(boss);
+            BossDeath?.Invoke();
         }
 
         if (TimeCounter.bridge == 152)
         {
 
-            looper.SetActive(true);
+           LooperSpawn?.Invoke();
+            
         }
 
 
 
     }
 
-  
+    public void Spawn()
+    {
+        boss.SetActive(true);
+        bossText.SetActive(true);
+        texting = true;
+    }
 
+    public void Death()
+    {
+        Destroy(boss);
+    }
+
+    public void Loop()
+    {
+        looper.SetActive(true);
+    }
+
+    
+   
 
 
 
