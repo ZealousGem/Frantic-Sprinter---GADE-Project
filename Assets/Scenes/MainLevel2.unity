@@ -6508,8 +6508,9 @@ GameObject:
   - component: {fileID: 1231096814}
   - component: {fileID: 1231096813}
   - component: {fileID: 1231096815}
+  - component: {fileID: 1231096816}
   m_Layer: 0
-  m_Name: GlobalPoints
+  m_Name: Singletons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6552,6 +6553,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ec29268d48a93c43809ed09786f48c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1231096816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231096812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12886d5777905c44fb33c5dccd9a99aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1250120121
