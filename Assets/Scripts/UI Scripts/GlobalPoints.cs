@@ -24,6 +24,7 @@ void Awake()
     public void setPointsint(int newPoints)
     {
         points = newPoints;
+        GameOverMenu.saveScore = points;
     }
 
     public int getPoints()
@@ -33,6 +34,7 @@ void Awake()
 
     public void Reset()
     {
+        
         points = 0;
     }
 }

@@ -28,9 +28,9 @@ public class TimeCounter : MonoBehaviour
             timmy +=  Time.deltaTime;
             timer = (int)(timmy);
             bridge = timer;
-            Debug.Log(bridge);
+          //  Debug.Log(bridge);
             no.text = TimeManager.Instance.GetTme().ToString();
-            Debug.Log(timer.ToString());
+           // Debug.Log(timer.ToString());
 
         }
 

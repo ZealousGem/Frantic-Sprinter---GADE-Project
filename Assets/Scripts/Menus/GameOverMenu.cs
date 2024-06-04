@@ -16,6 +16,7 @@ public class GameOverMenu : MonoBehaviour
     [SerializeField] private Text timer;
     public TimeCounter timmmy;
     public int score =100;
+   public static int saveScore;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +29,10 @@ public class GameOverMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if(score <= 0)
+        
+        if (score <= 0)
         {
-            
+           
             stopGame();
           //  Incoming = null;
             isActive = true;
@@ -82,13 +84,21 @@ public class GameOverMenu : MonoBehaviour
         
     }
 
-    public void stopGame()
+    public  async void stopGame()
     {
-        gameOver.SetActive(true);
-        bossy = true;
-        timer.text = timmmy.timer.ToString();
-        Time.timeScale = 0f;
-        
+       
+            gameOver.SetActive(true);
+            bossy = true;
+            timer.text = timmmy.timer.ToString();
+            Time.timeScale = 0f;
+        if (HighScoreScript.num <= PointManager.points)
+        {
+            await CloudSave.SaveData();
+        }
+
+
+       
+      
     }
 
     public void endGame()
