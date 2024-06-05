@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Services.CloudSave.Models;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -11,7 +12,7 @@ public class GameOverMenu : MonoBehaviour
     public GameObject WinningScreen;
     //public PlayerController playerScore;
      public bool isActive;
-     
+     int num = 0;
     public static bool bossy;
     [SerializeField] private Text timer;
     public TimeCounter timmmy;
@@ -23,6 +24,7 @@ public class GameOverMenu : MonoBehaviour
         gameOver.SetActive(false);
         WinningScreen.SetActive(false);
         isActive = false;
+      //  HighScoreScript.startdata();
      
     }
 
@@ -91,9 +93,13 @@ public class GameOverMenu : MonoBehaviour
             bossy = true;
             timer.text = timmmy.timer.ToString();
             Time.timeScale = 0f;
-        if (HighScoreScript.num <= PointManager.points)
+            
+        if (HighScoreScript.num < PointManager.points)
         {
             await CloudSave.SaveData();
+            Item temp = await CloudSave.LoadData();
+            HighScoreScript.num = temp.Value.GetAs<int>();
+            Debug.Log(HighScoreScript.num.ToString());
         }
 
 

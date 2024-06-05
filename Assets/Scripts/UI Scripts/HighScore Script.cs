@@ -9,12 +9,23 @@ public class HighScoreScript : MonoBehaviour
     // Start is called before the first frame update
 
     public GameObject highscore;
-    public static int num;
+    public static int num = 0;
     public Text socre;
     public GameObject main;
-    void Start()
+     void Start()
     {
        highscore.SetActive(false);
+      
+        
+        
+    }
+
+   public static async void startdata()
+    {
+        Item data = await CloudSave.LoadData();
+       
+            num = data.Value.GetAs<int>();
+        
     }
 
     // Update is called once per frame
@@ -25,7 +36,7 @@ public class HighScoreScript : MonoBehaviour
         Item data = await CloudSave.LoadData();
         Debug.Log(data.ToString());
         Debug.Log(GameOverMenu.saveScore.ToString());
-        num = data.Value.GetAs<int>();
+       // num = data.Value.GetAs<int>();
         socre.text = data.Value.GetAs<int>().ToString();
         print(socre);
 
