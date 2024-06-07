@@ -24,8 +24,8 @@ public class GameOverMenu : MonoBehaviour
         gameOver.SetActive(false);
         WinningScreen.SetActive(false);
         isActive = false;
-      //  HighScoreScript.startdata();
-     
+       
+
     }
 
     // Update is called once per frame
@@ -68,6 +68,7 @@ public class GameOverMenu : MonoBehaviour
         //gameOver.SetActive(false);
         score = 100;
         isActive = false;
+       
     }
 
     public void restartGame2()
@@ -83,7 +84,15 @@ public class GameOverMenu : MonoBehaviour
         TimeManager.Instance.Reset();
         isActive = false;
         bossy =false;
-        
+        try
+        {
+            HighScoreScript.startdata();
+        }
+        catch
+        {
+            Debug.Log("Player Not Loaded");
+        }
+
     }
 
     public  async void stopGame()
@@ -94,6 +103,7 @@ public class GameOverMenu : MonoBehaviour
             timer.text = timmmy.timer.ToString();
             Time.timeScale = 0f;
             
+
         if (HighScoreScript.num < PointManager.points)
         {
             await CloudSave.SaveData();
@@ -118,6 +128,14 @@ public class GameOverMenu : MonoBehaviour
     public void QuitGame()
     {
         SceneManager.LoadScene("MenuScreen");
+        try
+        {
+            HighScoreScript.startdata();
+        }
+        catch
+        {
+            Debug.Log("Player Not Loaded");
+        }
         GlobalPoints.Instance.Reset();
         PointManager.points = GlobalPoints.Instance.getPoints();
         PointManager.LoopPoints3 = LoopCounter.Instance.getPoints();

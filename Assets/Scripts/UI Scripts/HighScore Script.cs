@@ -12,12 +12,12 @@ public class HighScoreScript : MonoBehaviour
     public static int num = 0;
     public Text socre;
     public GameObject main;
-     void Start()
+     void  Start()
     {
        highscore.SetActive(false);
       
-        
-        
+
+
     }
 
    public static async void startdata()
@@ -28,18 +28,31 @@ public class HighScoreScript : MonoBehaviour
         
     }
 
+    public async void setLoop()
+    {
+
+        Item data = await CloudSave.LoadData();
+    }
+
     // Update is called once per frame
     public async void ButtonClick()
     {
-        main.SetActive(false);
-        highscore.SetActive(true);
-        Item data = await CloudSave.LoadData();
-        Debug.Log(data.ToString());
-        Debug.Log(GameOverMenu.saveScore.ToString());
-       // num = data.Value.GetAs<int>();
-        socre.text = data.Value.GetAs<int>().ToString();
-        print(socre);
-
+        try
+        {
+            main.SetActive(false);
+            highscore.SetActive(true);
+            Item data = await CloudSave.LoadData();
+            Debug.Log(data.ToString());
+            Debug.Log(GameOverMenu.saveScore.ToString());
+            // num = data.Value.GetAs<int>();
+            socre.text = data.Value.GetAs<int>().ToString();
+            print(socre);
+        }
+        
+        catch
+        {
+            socre.text = num.ToString();
+        }
     }
 
     public void back()
