@@ -106,12 +106,59 @@ public class GameOverMenu : MonoBehaviour
 
         if (HighScoreScript.num < PointManager.points)
         {
-            await CloudSave.SaveData();
-            Item temp = await CloudSave.LoadData();
-            HighScoreScript.num = temp.Value.GetAs<int>();
-            Debug.Log(HighScoreScript.num.ToString());
-        }
+            try
+            {
+                await CloudSave.SaveData();
+                Item temp = await CloudSave.LoadData();
+                HighScoreScript.num = temp.Value.GetAs<int>();
+                Debug.Log(HighScoreScript.num.ToString());
+            }
 
+            catch
+            {
+                Debug.Log("no internet");
+            }
+            
+                
+                
+           
+        }
+        if (HighScoreScript.num2 < PointManager.LoopPoints3)
+        {
+            try
+            {
+                await CloudSave.SaveLoops();
+                Item temp = await CloudSave.LoadLoops();
+                HighScoreScript.num2 = temp.Value.GetAs<int>();
+                Debug.Log(HighScoreScript.num2.ToString());
+            }
+            
+
+             catch
+            {
+                Debug.Log("no internet");
+            }
+        }
+         
+        if(HighScoreScript.num3 < TimeManager.Instance.GetTme())
+        {
+            if (TimeManager.Instance.GetTme() != 0)
+            {
+                try
+                {
+                    await CloudSave.SaveTime();
+                    Item temp = await CloudSave.LoadTime();
+                    HighScoreScript.num3 = temp.Value.GetAs<int>();
+                    Debug.Log(HighScoreScript.num3.ToString());
+                }
+                
+
+                 catch
+            {
+                    Debug.Log("no internet");
+                }
+            }
+        }
 
        
       

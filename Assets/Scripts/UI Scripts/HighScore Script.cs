@@ -10,7 +10,11 @@ public class HighScoreScript : MonoBehaviour
 
     public GameObject highscore;
     public static int num = 0;
+    public static int num2 = 0;
+    public static int num3 = 0;
     public Text socre;
+    public Text loop;
+    public Text Time;
     public GameObject main;
      void  Start()
     {
@@ -25,33 +29,77 @@ public class HighScoreScript : MonoBehaviour
         Item data = await CloudSave.LoadData();
        
             num = data.Value.GetAs<int>();
-        
+        try
+        {
+            Item data2 = await CloudSave.LoadLoops();
+
+            num2 = data2.Value.GetAs<int>();
+        }
+
+        catch
+        {
+            num2 = 0;
+        }
+
+        Item data3 = await CloudSave.LoadTime();
+
+        num3 = data3.Value.GetAs<int>();
     }
 
-    public async void setLoop()
-    {
-
-        Item data = await CloudSave.LoadData();
-    }
+    
 
     // Update is called once per frame
     public async void ButtonClick()
     {
+        main.SetActive(false);
+        highscore.SetActive(true);
         try
         {
-            main.SetActive(false);
-            highscore.SetActive(true);
+           
             Item data = await CloudSave.LoadData();
             Debug.Log(data.ToString());
             Debug.Log(GameOverMenu.saveScore.ToString());
             // num = data.Value.GetAs<int>();
             socre.text = data.Value.GetAs<int>().ToString();
             print(socre);
+
+            
+
+            Item data3 = await CloudSave.LoadTime();
+            Time.text = data3.Value.GetAs<int>().ToString();
+            print(Time);
+
         }
         
         catch
         {
             socre.text = num.ToString();
+           
+           
+
+        }
+
+        try {
+            Item data2 = await CloudSave.LoadLoops();
+            loop.text = data2.Value.GetAs<int>().ToString();
+            print(loop);
+        }
+        catch {
+
+            loop.text = num2.ToString();
+
+        }
+
+        try
+        {
+            Item data3 = await CloudSave.LoadTime();
+            Time.text = data3.Value.GetAs<int>().ToString();
+            print(Time);
+        }
+
+        catch
+        {
+            Time.text = num3.ToString();
         }
     }
 
