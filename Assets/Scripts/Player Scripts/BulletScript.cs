@@ -17,12 +17,12 @@ public class BulletScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("destroy"))
+        if (other.gameObject.CompareTag("destroy") || other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Boss"))
         {
             switch (gameObject.tag)
             {
                 case "Bullet": Destroy(other.gameObject); PointManager.points += 10; break;
-                    default: Destroy(other.gameObject);  break;
+                    default: /*Destroy(other.gameObject)*/;  break;
             }
             
             // Debug.Log("Detroyed");

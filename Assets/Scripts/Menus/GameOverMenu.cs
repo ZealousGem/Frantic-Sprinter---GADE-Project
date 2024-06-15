@@ -82,6 +82,7 @@ public class GameOverMenu : MonoBehaviour
         PointManager.LoopPoints3 = LoopCounter.Instance.getPoints();
         LoopCounter.Instance.Reset();
         TimeManager.Instance.Reset();
+        
         isActive = false;
         bossy =false;
         try
@@ -188,6 +189,7 @@ public class GameOverMenu : MonoBehaviour
         PointManager.LoopPoints3 = LoopCounter.Instance.getPoints();
         LoopCounter.Instance.Reset();
         TimeManager.Instance.Reset();
+        
         //WinningScreen.SetActive(false);
         // MenuScreen.run = true;
     }

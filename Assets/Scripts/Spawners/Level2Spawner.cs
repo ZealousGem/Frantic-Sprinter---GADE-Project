@@ -13,19 +13,21 @@ public class Level2Spawner : MonoBehaviour
     [SerializeField] private float intSpeed;
     [SerializeField] List<GameObject> SpawenrRand;
     private float lastSpawn;
-
+    
 
     private void Start()
     {
         SpawenrRand.Add(spawner1);
         SpawenrRand.Add(spawner2);
         SpawenrRand.Add(spawner3);
+       
     }
    
 
     // Update is called once per frame
     void Update()
     {
+       
         if (Time.time > lastSpawn + frequency)
         {
             int i = Random.Range(0, SpawenrRand.Count);

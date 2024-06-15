@@ -74,12 +74,20 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Boss"))
         {
-            Damage(damage);
+            switch (gameObject.tag)
+            {
+                case "Player": Damage(damage); break;
+                case "Destroyer": Destroy(other.gameObject); PointManager.points += 10; break;
+            }
         }
 
         if (other.gameObject.CompareTag("Boss2"))
         {
-            Damage(damage);
+             switch (gameObject.tag)
+            {
+                case "Player": Damage(damage); break;
+                case "Destroyer": Destroy(other.gameObject); PointManager.points += 10; break;
+            }
         }
 
 

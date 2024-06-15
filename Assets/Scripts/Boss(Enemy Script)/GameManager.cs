@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent BossSpawn;
     public UnityEvent LooperSpawn;
     public UnityEvent BossDeath;
+    public UnityEvent DisapperText;
   
     void Start()
     {
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (TimeCounter.bridge == 70)
+        if (TimeCounter.bridge == 60)
         {
           
            BossSpawn?.Invoke();
@@ -63,18 +64,18 @@ public class GameManager : MonoBehaviour
 
         if (goAway == true)
         {
-            bossText.SetActive(false);
+            DisapperText?.Invoke();
             //Debug.Log(GameOverMenu.bossy);
 
         }
 
 
-        if (TimeCounter.bridge == 150)
+        if (TimeCounter.bridge == 120)
         {
             BossDeath?.Invoke();
         }
 
-        if (TimeCounter.bridge == 152)
+        if (TimeCounter.bridge == 121)
         {
 
            LooperSpawn?.Invoke();
@@ -90,16 +91,23 @@ public class GameManager : MonoBehaviour
         boss.SetActive(true);
         bossText.SetActive(true);
         texting = true;
+     
     }
 
     public void Death()
     {
         Destroy(boss);
+        
     }
 
     public void Loop()
     {
         looper.SetActive(true);
+    }
+
+    public void BeGone()
+    {
+        bossText.SetActive(false);
     }
 
     

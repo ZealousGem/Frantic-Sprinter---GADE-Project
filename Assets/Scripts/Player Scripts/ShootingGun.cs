@@ -47,6 +47,6 @@ public class ShootingGun : MonoBehaviour
         GameObject newSpawn = Instantiate(spawner, transform.position, Quaternion.identity);
         newSpawn.GetComponent<Rigidbody>().velocity = moving.forward * intSpeed;
          //newSpawn.transform.position += transform.forward * intSpeed * Time.deltaTime; 
-        newSpawn.transform.parent = transform;
+       // newSpawn.transform.parent = transform;
     }
 }

@@ -10,17 +10,18 @@ public class Spawner : MonoBehaviour
      [SerializeField]private GameObject spawner;
      [SerializeField]private float frequency;
      [SerializeField] private float intSpeed;
+   
 
-    
     private float lastSpawn; 
-    /*void Start()
+    void Start()
     {
-        
-    } */
+      
+    } 
 
     // Update is called once per frame
     void Update()
     {
+     
         if(Time.time > lastSpawn + frequency)
         {
             Spawn();
