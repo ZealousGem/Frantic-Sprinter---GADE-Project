@@ -2487,7 +2487,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ce3e2694ad9726449b47bd8a1c0da841, type: 2}
+      objectReference: {fileID: 2100000, guid: 3fd9b9c93ac56c641a399bd3c5dc5c92, type: 2}
     - target: {fileID: 6029927082220265927, guid: 5c41a627b039c0f4d81be4d6b380ff2d,
         type: 3}
       propertyPath: m_Name
@@ -2560,7 +2560,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ce3e2694ad9726449b47bd8a1c0da841, type: 2}
+      objectReference: {fileID: 2100000, guid: 3fd9b9c93ac56c641a399bd3c5dc5c92, type: 2}
     - target: {fileID: 6029927082220265927, guid: 5c41a627b039c0f4d81be4d6b380ff2d,
         type: 3}
       propertyPath: m_Name
@@ -2715,7 +2715,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1e54928389607fa41a7eb579973d6776, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.047169805, g: 0.044722315, b: 0.044722315, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3606,8 +3606,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 294aef5b74e451642b99d356b1d4c994, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: bc1496db0d95d0a42b92dfcf0acbe595, type: 3}
+  m_Color: {r: 0.990566, g: 0.9578586, b: 0.9578586, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4463,7 +4463,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ce3e2694ad9726449b47bd8a1c0da841, type: 2}
+      objectReference: {fileID: 2100000, guid: 3fd9b9c93ac56c641a399bd3c5dc5c92, type: 2}
     - target: {fileID: 6029927082220265927, guid: 5c41a627b039c0f4d81be4d6b380ff2d,
         type: 3}
       propertyPath: m_Name
@@ -4536,7 +4536,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ce3e2694ad9726449b47bd8a1c0da841, type: 2}
+      objectReference: {fileID: 2100000, guid: 3fd9b9c93ac56c641a399bd3c5dc5c92, type: 2}
     - target: {fileID: 6029927082220265927, guid: 5c41a627b039c0f4d81be4d6b380ff2d,
         type: 3}
       propertyPath: m_Name
@@ -4731,7 +4731,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ce3e2694ad9726449b47bd8a1c0da841, type: 2}
+      objectReference: {fileID: 2100000, guid: 3fd9b9c93ac56c641a399bd3c5dc5c92, type: 2}
     - target: {fileID: 6029927082220265927, guid: 5c41a627b039c0f4d81be4d6b380ff2d,
         type: 3}
       propertyPath: m_Name
@@ -5880,7 +5880,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ce3e2694ad9726449b47bd8a1c0da841, type: 2}
+      objectReference: {fileID: 2100000, guid: 3fd9b9c93ac56c641a399bd3c5dc5c92, type: 2}
     - target: {fileID: 6029927082220265927, guid: 5c41a627b039c0f4d81be4d6b380ff2d,
         type: 3}
       propertyPath: m_Name
@@ -7443,7 +7443,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ce3e2694ad9726449b47bd8a1c0da841, type: 2}
+      objectReference: {fileID: 2100000, guid: 3fd9b9c93ac56c641a399bd3c5dc5c92, type: 2}
     - target: {fileID: 6029927082220265927, guid: 5c41a627b039c0f4d81be4d6b380ff2d,
         type: 3}
       propertyPath: m_Name
@@ -7464,6 +7464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254622063}
   - component: {fileID: 1254622064}
+  - component: {fileID: 1254622065}
   m_Layer: 0
   m_Name: 'PickUpSpawner  '
   m_TagString: Untagged
@@ -7493,7 +7494,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254622062}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ab77308f11a16548a2a9bc1af3292ea, type: 3}
   m_Name: 
@@ -7501,6 +7502,28 @@ MonoBehaviour:
   spawner: {fileID: 6761641237461424308, guid: 81d2992458881c041b6cdf805d5ebf5d, type: 3}
   frequency: 15
   intSpeed: 20
+--- !u!114 &1254622065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254622062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec874c667698a62478f1cf705125d675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner1: {fileID: 6761641237461424308, guid: 81d2992458881c041b6cdf805d5ebf5d,
+    type: 3}
+  spawner2: {fileID: 6761641237461424308, guid: 4f5a1024f3713c048b6e80e1cd5d007f,
+    type: 3}
+  spawner3: {fileID: 6761641237461424308, guid: 5561146e2a204294e9833a2f9e606d95,
+    type: 3}
+  ActualSpawn: {fileID: 0}
+  frequency: 15
+  intSpeed: 20
+  SpawenrRand: []
 --- !u!1 &1263141010
 GameObject:
   m_ObjectHideFlags: 0
@@ -7816,7 +7839,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ce3e2694ad9726449b47bd8a1c0da841, type: 2}
+      objectReference: {fileID: 2100000, guid: 3fd9b9c93ac56c641a399bd3c5dc5c92, type: 2}
     - target: {fileID: 6029927082220265927, guid: 5c41a627b039c0f4d81be4d6b380ff2d,
         type: 3}
       propertyPath: m_Name
@@ -8273,7 +8296,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ce3e2694ad9726449b47bd8a1c0da841, type: 2}
+      objectReference: {fileID: 2100000, guid: 3fd9b9c93ac56c641a399bd3c5dc5c92, type: 2}
     - target: {fileID: 6029927082220265927, guid: 5c41a627b039c0f4d81be4d6b380ff2d,
         type: 3}
       propertyPath: m_Name
@@ -8755,6 +8778,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1751736499}
   - component: {fileID: 1751736500}
+  - component: {fileID: 1751736501}
   m_Layer: 0
   m_Name: PickUpSpawner   (1)
   m_TagString: Untagged
@@ -8784,7 +8808,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1751736498}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ab77308f11a16548a2a9bc1af3292ea, type: 3}
   m_Name: 
@@ -8792,6 +8816,28 @@ MonoBehaviour:
   spawner: {fileID: 6761641237461424308, guid: e92ccabe111634b47951b030da46bf50, type: 3}
   frequency: 10
   intSpeed: 20
+--- !u!114 &1751736501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751736498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec874c667698a62478f1cf705125d675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner1: {fileID: 6761641237461424308, guid: e92ccabe111634b47951b030da46bf50,
+    type: 3}
+  spawner2: {fileID: 6761641237461424308, guid: 3a123019818cbc7409106b60964d310b,
+    type: 3}
+  spawner3: {fileID: 6761641237461424308, guid: 7ee6dc0b490edd44ca7a778c5889de16,
+    type: 3}
+  ActualSpawn: {fileID: 0}
+  frequency: 10
+  intSpeed: 20
+  SpawenrRand: []
 --- !u!1 &1755231396
 GameObject:
   m_ObjectHideFlags: 0
@@ -8852,6 +8898,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1812906196}
   - component: {fileID: 1812906195}
+  - component: {fileID: 1812906197}
   m_Layer: 0
   m_Name: 'PickUpSpawner '
   m_TagString: Untagged
@@ -8866,7 +8913,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1812906194}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ab77308f11a16548a2a9bc1af3292ea, type: 3}
   m_Name: 
@@ -8889,6 +8936,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1755231397}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1812906197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812906194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec874c667698a62478f1cf705125d675, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner1: {fileID: 6761641237461424308, guid: ff77737be2763d84d8ad3321188c73a6,
+    type: 3}
+  spawner2: {fileID: 6761641237461424308, guid: 1df8c0f1d1da962459ed16a67c21be8f,
+    type: 3}
+  spawner3: {fileID: 6761641237461424308, guid: 5e07976f9a6391341ad0923c04145fa3,
+    type: 3}
+  ActualSpawn: {fileID: 0}
+  frequency: 20
+  intSpeed: 20
+  SpawenrRand: []
 --- !u!1 &1834010968
 GameObject:
   m_ObjectHideFlags: 0
@@ -9436,7 +9505,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ce3e2694ad9726449b47bd8a1c0da841, type: 2}
+      objectReference: {fileID: 2100000, guid: 3fd9b9c93ac56c641a399bd3c5dc5c92, type: 2}
     - target: {fileID: 6029927082220265927, guid: 5c41a627b039c0f4d81be4d6b380ff2d,
         type: 3}
       propertyPath: m_Name
@@ -9992,7 +10061,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ce3e2694ad9726449b47bd8a1c0da841, type: 2}
+      objectReference: {fileID: 2100000, guid: 3fd9b9c93ac56c641a399bd3c5dc5c92, type: 2}
     - target: {fileID: 6029927082220265927, guid: 5c41a627b039c0f4d81be4d6b380ff2d,
         type: 3}
       propertyPath: m_Name
@@ -10070,7 +10139,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ce3e2694ad9726449b47bd8a1c0da841, type: 2}
+      objectReference: {fileID: 2100000, guid: 3fd9b9c93ac56c641a399bd3c5dc5c92, type: 2}
     - target: {fileID: 6029927082220265927, guid: 5c41a627b039c0f4d81be4d6b380ff2d,
         type: 3}
       propertyPath: m_Name

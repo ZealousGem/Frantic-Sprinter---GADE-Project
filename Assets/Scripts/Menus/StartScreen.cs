@@ -45,10 +45,10 @@ public class MenuScreen : MonoBehaviour
         SceneManager.LoadScene("MainLevel2");
     }
 
-    // public void LoadLevel3()
-    // {
-    //     SceneManager.LoadScene(3);
-    // }
+     public void LoadLevel3()
+     {
+        SceneManager.LoadScene("MainLevel3");
+     }
 
     public void Back()
     {

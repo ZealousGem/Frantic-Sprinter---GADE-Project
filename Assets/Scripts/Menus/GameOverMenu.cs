@@ -194,7 +194,19 @@ public class GameOverMenu : MonoBehaviour
         // MenuScreen.run = true;
     }
 
-   
+    public void QuitGame2()
+    {
+
+
+        SceneManager.LoadScene("MenuScreen");
+        
+        
+
+        //WinningScreen.SetActive(false);
+        // MenuScreen.run = true;
+    }
+
+
 
 
 }
