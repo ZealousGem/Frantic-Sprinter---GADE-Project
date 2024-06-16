@@ -79,8 +79,9 @@ public class GameOverMenu : MonoBehaviour
         score = 100;
         GlobalPoints.Instance.Reset();
         PointManager.points = GlobalPoints.Instance.getPoints();
-        PointManager.LoopPoints3 = LoopCounter.Instance.getPoints();
         LoopCounter.Instance.Reset();
+        PointManager.LoopPoints3 = LoopCounter.Instance.getPoints();
+       
         TimeManager.Instance.Reset();
         
         isActive = false;
@@ -186,8 +187,9 @@ public class GameOverMenu : MonoBehaviour
         }
         GlobalPoints.Instance.Reset();
         PointManager.points = GlobalPoints.Instance.getPoints();
-        PointManager.LoopPoints3 = LoopCounter.Instance.getPoints();
         LoopCounter.Instance.Reset();
+        PointManager.LoopPoints3 = LoopCounter.Instance.getPoints();
+       
         TimeManager.Instance.Reset();
         
         //WinningScreen.SetActive(false);

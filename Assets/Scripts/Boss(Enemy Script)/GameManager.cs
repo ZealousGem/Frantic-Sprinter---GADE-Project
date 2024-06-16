@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
             BossDeath?.Invoke();
         }
 
-        if (TimeCounter.bridge == 121)
+        if (TimeCounter.bridge == 122)
         {
 
            LooperSpawn?.Invoke();
