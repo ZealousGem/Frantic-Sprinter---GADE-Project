@@ -19,6 +19,8 @@ public class MenuScreen : MonoBehaviour
         //run = true;
         levelSelectPanel.SetActive(false);
         startPanel.SetActive(true);
+        AudioManager.instance.musicSource.Play();
+        AudioManager.PlayMusic("LevelOst");
         //howToPlayPanel.SetActive(false);
     }
 
@@ -43,12 +45,19 @@ public class MenuScreen : MonoBehaviour
     public void LoadLevel2()
     {
         SceneManager.LoadScene("MainLevel2");
+        AudioManager.instance.musicSource.Stop();
+        AudioManager.PlayMusic("Level2");
+
+
     }
 
      public void LoadLevel3()
      {
         SceneManager.LoadScene("MainLevel3");
-     }
+        AudioManager.instance.musicSource.Stop();
+        AudioManager.PlayMusic("Level2");
+
+    }
 
     public void Back()
     {

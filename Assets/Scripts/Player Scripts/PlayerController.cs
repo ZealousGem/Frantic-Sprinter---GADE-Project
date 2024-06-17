@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
             switch (gameObject.tag)
             {
                 case "Player": Damage(damage); break;
-                case "Destroyer": Destroy(other.gameObject); PointManager.points += 10; break;
+                case "Destroyer": Destroy(other.gameObject); PointManager.points += 10; AudioManager.instance.SFX("Points"); break;
             }
              
         }
@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
             switch (gameObject.tag)
             {
                 case "Player": Damage(damage); break;
-                case "Destroyer": Destroy(other.gameObject); PointManager.points += 10; break;
+                case "Destroyer": Destroy(other.gameObject); PointManager.points += 10; AudioManager.instance.SFX("Points"); break;
             }
         }
 
@@ -86,7 +86,7 @@ public class PlayerController : MonoBehaviour
              switch (gameObject.tag)
             {
                 case "Player": Damage(damage); break;
-                case "Destroyer": Destroy(other.gameObject); PointManager.points += 10; break;
+                case "Destroyer": Destroy(other.gameObject); PointManager.points += 10; AudioManager.instance.SFX("Points"); break;
             }
         }
 
@@ -96,6 +96,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("PickUp"))
         {
             Destroy(other.gameObject);
+            AudioManager.instance.SFX("PowerUpPickup");
             Heal(heal);
             //Debug.Log("Item Picked Up");
         }
@@ -122,6 +123,7 @@ public class PlayerController : MonoBehaviour
             //rb.AddForce(JumpInput * jump, ForceMode.Impulse);
             rb.AddForce(new Vector3(rb.velocity.x, jump, 0f), ForceMode.Impulse);
             Ani.SetTrigger("Jump");
+            AudioManager.instance.SFX("JumpEffect");
             isGrounded = false;
 
         }

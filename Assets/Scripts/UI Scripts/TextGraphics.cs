@@ -15,6 +15,7 @@ public class TextGraphics : MonoBehaviour
     private void Start()
     {
         boss.text = "BOSS INCOMING!!!";
+       
     }
     void Update()
     {
@@ -25,6 +26,7 @@ public class TextGraphics : MonoBehaviour
 
         else
         {
+            
             boss.text = "BOSS INCOMING!!!";
             if (change)
             {

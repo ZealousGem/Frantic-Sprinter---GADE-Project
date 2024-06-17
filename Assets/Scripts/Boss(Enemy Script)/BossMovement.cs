@@ -8,8 +8,12 @@ public class BossMovement : MonoBehaviour
 
     public Vector3 endPos = new Vector3 (0f, 0f, 0f);
     float speed = 100;
-   
+
     // Update is called once per frame
+    private void Start()
+    {
+        AudioManager.instance.SFX("Missile");
+    }
     void Update()
     {
         if (transform.position != endPos)

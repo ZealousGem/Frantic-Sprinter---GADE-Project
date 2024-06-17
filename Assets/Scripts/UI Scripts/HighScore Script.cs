@@ -26,9 +26,17 @@ public class HighScoreScript : MonoBehaviour
 
    public static async void startdata()
     {
-        Item data = await CloudSave.LoadData();
-       
+        try
+        {
+            Item data = await CloudSave.LoadData();
+
             num = data.Value.GetAs<int>();
+        }
+
+        catch
+        {
+            num = 0;
+        }
         try
         {
             Item data2 = await CloudSave.LoadLoops();
@@ -41,9 +49,15 @@ public class HighScoreScript : MonoBehaviour
             num2 = 0;
         }
 
-        Item data3 = await CloudSave.LoadTime();
+        try
+        {
+            Item data3 = await CloudSave.LoadTime();
 
-        num3 = data3.Value.GetAs<int>();
+            num3 = data3.Value.GetAs<int>();
+        }
+
+        catch { num3 = 0; }
+       ;
     }
 
     

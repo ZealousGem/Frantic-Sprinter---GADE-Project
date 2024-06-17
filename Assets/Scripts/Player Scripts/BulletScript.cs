@@ -21,7 +21,7 @@ public class BulletScript : MonoBehaviour
         {
             switch (gameObject.tag)
             {
-                case "Bullet": Destroy(other.gameObject); PointManager.points += 10; break;
+                case "Bullet": Destroy(other.gameObject); PointManager.points += 10; AudioManager.instance.SFX("Points"); break;
                     default: /*Destroy(other.gameObject)*/;  break;
             }
             

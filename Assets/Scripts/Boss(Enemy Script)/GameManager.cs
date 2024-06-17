@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public static bool goAway;
     public static bool enter;
     public static bool texting;
+  
 
     public PickUpManager PickUpManager;
     public PointManager pointManager;
@@ -43,7 +44,8 @@ public class GameManager : MonoBehaviour
         PickUpManager.StopPickups.AddListener(PickUpManager.Stop);
 
         pointManager.PointEvent.AddListener(pointManager.PointDisplay);
-
+        
+        
       
 
         //  Debug.Log(currentScene);
@@ -57,7 +59,9 @@ public class GameManager : MonoBehaviour
         {
           
            BossSpawn?.Invoke();
-            
+         
+
+
         }
 
 
@@ -65,7 +69,7 @@ public class GameManager : MonoBehaviour
         if (goAway == true)
         {
             DisapperText?.Invoke();
-            //Debug.Log(GameOverMenu.bossy);
+            
 
         }
 
@@ -73,9 +77,10 @@ public class GameManager : MonoBehaviour
         if (TimeCounter.bridge == 120)
         {
             BossDeath?.Invoke();
+          
         }
 
-        if (TimeCounter.bridge == 122)
+        if (TimeCounter.bridge == 121)
         {
 
            LooperSpawn?.Invoke();
@@ -91,11 +96,12 @@ public class GameManager : MonoBehaviour
         boss.SetActive(true);
         bossText.SetActive(true);
         texting = true;
-     
+        
     }
 
     public void Death()
     {
+       
         Destroy(boss);
         
     }
@@ -111,7 +117,7 @@ public class GameManager : MonoBehaviour
     }
 
     
-   
+     
 
 
 

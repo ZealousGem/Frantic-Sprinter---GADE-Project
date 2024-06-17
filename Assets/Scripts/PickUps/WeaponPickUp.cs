@@ -14,6 +14,7 @@ public class WeaponPickUp : MonoBehaviour
             if (PickUpManager.gunAct != true)
             {
                 PickUpManager.confirm = true;
+                AudioManager.instance.SFX("PowerUpPickup");
                 PickUpManager.bunAct = true;
             }
 

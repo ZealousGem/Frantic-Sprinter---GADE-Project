@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -23,10 +24,17 @@ public class AudioManager : MonoBehaviour
 
     }
 
+
     private void Start()
     {
-       // Music();
+        switch (SceneManager.GetActiveScene().name)
+        {
+            case "MenuScreen": PlayMusic("LevelOst"); break;
+            default: PlayMusic("Level2"); break;
+        }
     }
+
+    
 
     public void Music(string name)
     {
@@ -34,7 +42,16 @@ public class AudioManager : MonoBehaviour
         if (song != null)
         {
             musicSource.clip = song.SongSound;
-            musicSource.Play();
+            if (GameOverMenu.isDead is false)
+            {
+                musicSource.Play();
+            }
+            else { 
+            
+                musicSource.Pause();
+            
+            }
+            
         }
 
         else
@@ -42,6 +59,8 @@ public class AudioManager : MonoBehaviour
             Debug.Log("not found");
         }
     }
+
+   
 
     public void SFX(string name)
     {
@@ -54,6 +73,41 @@ public class AudioManager : MonoBehaviour
         else
         {
             Debug.Log("not found");
+        }
+    }
+
+    public static void PlayMusic(string name)
+    {
+        if (instance == null)
+        {
+            return;
+        }
+        SoundEffects song = Array.Find(instance.music, x => x.SongName == name);
+        if (song != null)
+        {
+            instance.musicSource.clip = song.SongSound;
+            if (GameOverMenu.isDead is false)
+            {
+                instance.musicSource.Play();
+            }
+        }
+        else
+        {
+            Debug.Log("cant find it");
+        }
+
+    }
+
+    public static void StopMusic()
+    {
+        if(instance == null)
+        {
+            return;
+        }
+
+        if (instance.musicSource.isPlaying)
+        {
+            instance.musicSource.Stop();
         }
     }
 }

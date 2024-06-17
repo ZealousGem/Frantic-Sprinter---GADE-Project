@@ -33,8 +33,8 @@ public class EnemyMovement : MonoBehaviour
             right = false;
             DeathTime = false;
             gun.SetActive(false);
-        mve.SetBool(boss, true);
-           
+            mve.SetBool(boss, true);
+        AudioManager.instance.SFX("Boss");
          
           
     }
@@ -127,8 +127,8 @@ public class EnemyMovement : MonoBehaviour
             begin = true;
             GameManager.goAway = true;
             mve.SetBool(boss, false);
-       
             
+
         }
     }
 

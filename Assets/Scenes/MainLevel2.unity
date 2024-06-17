@@ -761,7 +761,7 @@ Transform:
   m_GameObject: {fileID: 190346810}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.05925, y: -7.7125106, z: 30.949146}
+  m_LocalPosition: {x: 7.05925, y: -7.7125106, z: 36.31}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1240,7 +1240,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.679
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3319,7 +3319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &680342157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3332,8 +3332,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb0c7e9bee8ba584d82ba186a3fa1590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: []
-  sfx: []
+  music:
+  - SongName: LevelOst
+    SongSound: {fileID: 8300000, guid: 6aa01917c8180bf4d9b26dc34b9578b6, type: 3}
+  - SongName: Level2
+    SongSound: {fileID: 8300000, guid: a3d2503946c4a3744ad5a9d1df211996, type: 3}
+  sfx:
+  - SongName: JumpEffect
+    SongSound: {fileID: 8300000, guid: b66c23410f318ff458814b70208ec1cb, type: 3}
+  - SongName: Points
+    SongSound: {fileID: 8300000, guid: 987a9416e9cf6e24f91e0264556c2189, type: 3}
+  - SongName: DeathTheme
+    SongSound: {fileID: 8300000, guid: 82066c170adbab941a37dabed23ffa0a, type: 3}
+  - SongName: PowerUpPickup
+    SongSound: {fileID: 8300000, guid: e72fa1956ae719a428a6f76f72ef1b82, type: 3}
+  - SongName: Missile
+    SongSound: {fileID: 8300000, guid: 95f310b487c411b48b48cb4415e4acf9, type: 3}
+  - SongName: Boss
+    SongSound: {fileID: 8300000, guid: 9e5ef959203a4124e9ade381821cdc31, type: 3}
   musicSource: {fileID: 938009033}
   sfxSource: {fileID: 311887864}
 --- !u!4 &680342158
@@ -5412,7 +5428,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.346
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9983,7 +9999,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 15.62}
-  m_LocalScale: {x: 14.004172, y: 1.0239532, z: 55.15623}
+  m_LocalScale: {x: 14.004172, y: 1.0239532, z: 67.753914}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

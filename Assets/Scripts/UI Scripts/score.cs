@@ -17,6 +17,7 @@ public class score : MonoBehaviour
         if(amount <= 0)
         {
            scoreText.text = 0.ToString();
+            AudioManager.instance.SFX("DeathTheme");
         }
 
         if (amount >= 100)

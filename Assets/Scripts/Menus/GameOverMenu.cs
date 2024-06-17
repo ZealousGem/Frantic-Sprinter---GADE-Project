@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Services.CloudSave.Models;
@@ -18,12 +19,19 @@ public class GameOverMenu : MonoBehaviour
     public TimeCounter timmmy;
     public int score =100;
    public static int saveScore;
+    public static bool isDead;
+   
+   
+   
     // Start is called before the first frame update
     void Start()
     {
+       
         gameOver.SetActive(false);
         WinningScreen.SetActive(false);
         isActive = false;
+        AudioManager.instance.musicSource.Play();
+      
        
 
     }
@@ -65,6 +73,7 @@ public class GameOverMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Main");
+        AudioManager.instance.musicSource.Play();
         //gameOver.SetActive(false);
         score = 100;
         isActive = false;
@@ -74,6 +83,8 @@ public class GameOverMenu : MonoBehaviour
     public void restartGame2()
     {
         Time.timeScale = 1f;
+        isDead = false;
+        AudioManager.instance.musicSource.Play();
         SceneManager.LoadScene("MainLevel2");
         //gameOver.SetActive(false);
         score = 100;
@@ -99,12 +110,17 @@ public class GameOverMenu : MonoBehaviour
 
     public  async void stopGame()
     {
-       
-            gameOver.SetActive(true);
+        isDead = true;
+       AudioManager.instance.musicSource.Stop();
+      
+        
+        gameOver.SetActive(true);
             bossy = true;
             timer.text = timmmy.timer.ToString();
             Time.timeScale = 0f;
             
+
+
 
         if (HighScoreScript.num < PointManager.points)
         {
@@ -168,6 +184,7 @@ public class GameOverMenu : MonoBehaviour
 
     public void endGame()
     {
+
         WinningScreen?.SetActive(true);
         timer.text = timmmy.timer.ToString();
         Time.timeScale = 0f;
@@ -176,6 +193,9 @@ public class GameOverMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        isDead = false;
+        AudioManager.instance.musicSource.Play();
+        AudioManager.PlayMusic("LevelOst");
         SceneManager.LoadScene("MenuScreen");
         try
         {
@@ -185,6 +205,7 @@ public class GameOverMenu : MonoBehaviour
         {
             Debug.Log("Player Not Loaded");
         }
+       
         GlobalPoints.Instance.Reset();
         PointManager.points = GlobalPoints.Instance.getPoints();
         LoopCounter.Instance.Reset();
@@ -199,7 +220,8 @@ public class GameOverMenu : MonoBehaviour
     public void QuitGame2()
     {
 
-
+        AudioManager.instance.musicSource.Play();
+        AudioManager.PlayMusic("LevelOst");
         SceneManager.LoadScene("MenuScreen");
         
         
@@ -208,7 +230,7 @@ public class GameOverMenu : MonoBehaviour
         // MenuScreen.run = true;
     }
 
-
-
+    
+    
 
 }
