@@ -11,7 +11,11 @@ public class BulletScript : MonoBehaviour
     {
         
             Destroy(gameObject, time);
-          
+        switch (gameObject.tag)
+        {
+            case "Bullet": AudioManager.instance.SFX("Laser"); break;
+            case "destroy": AudioManager.instance.SFX("Gun"); break;
+        }
         
 
     }

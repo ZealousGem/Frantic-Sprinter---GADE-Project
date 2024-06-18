@@ -3350,6 +3350,12 @@ MonoBehaviour:
     SongSound: {fileID: 8300000, guid: 95f310b487c411b48b48cb4415e4acf9, type: 3}
   - SongName: Boss
     SongSound: {fileID: 8300000, guid: 9e5ef959203a4124e9ade381821cdc31, type: 3}
+  - SongName: Laser
+    SongSound: {fileID: 8300000, guid: 97e74f8c395d37941b37c7b3f520492c, type: 3}
+  - SongName: Gun
+    SongSound: {fileID: 8300000, guid: 8f6d8794dc2fa9e41bb40f8049461413, type: 3}
+  - SongName: stop
+    SongSound: {fileID: 8300000, guid: cb8439a79c4efe04baef40b153a27aee, type: 3}
   musicSource: {fileID: 938009033}
   sfxSource: {fileID: 311887864}
 --- !u!4 &680342158

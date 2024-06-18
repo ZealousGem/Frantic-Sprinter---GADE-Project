@@ -19,6 +19,8 @@ public class WeaponEffect : PickUpPower
     public override void RemoveEffect(GameObject player, GameObject cap)
     {
         activateGun = false;
+        AudioManager.instance.SFX("stop");
+  
         cap.SetActive(false);
        
     }

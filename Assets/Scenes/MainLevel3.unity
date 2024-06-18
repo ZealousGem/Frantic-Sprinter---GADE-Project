@@ -2167,7 +2167,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1d230fcd28aa7314f8ce84518ac6bda7, type: 3}
-  m_Color: {r: 0.990566, g: 0.9578586, b: 0.9578586, a: 1}
+  m_Color: {r: 0.990566, g: 0.9578586, b: 0.9578586, a: 0.36078432}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3771,6 +3771,12 @@ MonoBehaviour:
     SongSound: {fileID: 8300000, guid: 95f310b487c411b48b48cb4415e4acf9, type: 3}
   - SongName: Boss
     SongSound: {fileID: 8300000, guid: 9e5ef959203a4124e9ade381821cdc31, type: 3}
+  - SongName: Laser
+    SongSound: {fileID: 8300000, guid: 97e74f8c395d37941b37c7b3f520492c, type: 3}
+  - SongName: Gun
+    SongSound: {fileID: 8300000, guid: 8f6d8794dc2fa9e41bb40f8049461413, type: 3}
+  - SongName: stop
+    SongSound: {fileID: 8300000, guid: cb8439a79c4efe04baef40b153a27aee, type: 3}
   musicSource: {fileID: 371689041}
   sfxSource: {fileID: 1554978492}
 --- !u!4 &679747352

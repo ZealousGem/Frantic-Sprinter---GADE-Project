@@ -10,6 +10,7 @@ public class MenuScreen : MonoBehaviour
 {
     public GameObject startPanel;
     public GameObject levelSelectPanel;
+    public GameObject AudioPanel;
    // public static bool run;
     //public GameObject howToPlayPanel;
 
@@ -18,6 +19,7 @@ public class MenuScreen : MonoBehaviour
     {
         //run = true;
         levelSelectPanel.SetActive(false);
+        AudioPanel.SetActive(false);
         startPanel.SetActive(true);
         AudioManager.instance.musicSource.Play();
         AudioManager.PlayMusic("LevelOst");
@@ -29,6 +31,18 @@ public class MenuScreen : MonoBehaviour
         startPanel.SetActive(false);
         levelSelectPanel.SetActive(true);
         Debug.Log("work");
+    }
+
+    public void MusicPanel()
+    {
+        AudioPanel.SetActive(true);
+        startPanel.SetActive(false);
+    }
+
+    public void BackButton()
+    {
+        AudioPanel.SetActive(false);
+        startPanel.SetActive(true);
     }
 
     public void HowToPlayClick()

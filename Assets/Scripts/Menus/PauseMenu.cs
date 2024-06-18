@@ -69,6 +69,7 @@ public class PauseMenu : MonoBehaviour
         
             pause.SetActive(true);
             Time.timeScale = 0f;
+            AudioManager.instance.musicSource.Pause();
             isPaused = true;
           // Debug.Log("paused");
         
@@ -78,6 +79,7 @@ public class PauseMenu : MonoBehaviour
     public void resumeGame()
     {
         pause.SetActive(false);
+        AudioManager.instance.musicSource.UnPause();
         Time.timeScale = 1f;
         isPaused = false;
 

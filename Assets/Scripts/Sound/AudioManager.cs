@@ -110,6 +110,18 @@ public class AudioManager : MonoBehaviour
             instance.musicSource.Stop();
         }
     }
+
+    public void MusicVolumeAmount(float volume)
+    {
+        musicSource.volume = volume;
+        
+    }
+
+    public void SFXVolumeAmount(float volume)
+    {
+        sfxSource.volume = volume;
+
+    }
 }
 
 
