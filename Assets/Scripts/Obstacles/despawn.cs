@@ -9,6 +9,11 @@ public class despawn : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(other.gameObject);
-       // Debug.Log("Detroyed");
+        if (other.gameObject.tag is "destroy")
+        {
+            PointManager.points += 1; // increases everytime an obstable is destroyed
+        }
+       
+        // Debug.Log("Detroyed");
     }
 }
